@@ -1,0 +1,17 @@
+; Comentário
+; Nada
+
+.DADOS
+  ARM A 200 0x2f          LDA 200
+  ARM B 239 0xd2          ADD 201
+  ARM C 202               STA 2050
+                          HLT
+.SETUP
+  AC 0x00                 MEMORY:
+  PC 0x20                 200 10
+                          239 11
+.TEXT
+  LOA A                   REGISTER:
+  ADD B                   AC 0
+  SAV C                   PC 32
+  STOP
